@@ -18,7 +18,7 @@ class RowIterator(TransformerMixin):
         def transform(self, X):
             return (row for _, row in X.iterrows())
 
-def newfunc():
+
 
     
 
@@ -63,7 +63,8 @@ def newfunc():
 
     ])
     themodel = copper_pipeline.fit(sorteddata[[2, 5, 8]], sorteddata[[10]] )
-
+    
+def newfunc():
 
     exampledata2=pd.DataFrame([['Anaheim Ducks', 2010, 'Minneapolis', 100, 'Supersonics', 'NBA', 33,33, .3, 80]])
     
