@@ -119,17 +119,17 @@ My pipeline consists of a row iterator, a dictionary vectorizer, followed by a d
     
 <!-- Sixth Container -->   
 <div class="container-fluid bg-3 text-right">
-<form id='input' method='POST' action='\basicadd' >
+<form id='input' method='POST' action='/basicadd' >
         <p>
-          City: <input type='int' name='cityinput' />  
+          City: <input type='text' name='cityinput' />  
         </p>
     
         <p>
-          Sport: <input type='int' name='sportinput' />  
+          Sport: <input type='text' name='sportinput' />  
         </p>
     
         <p>
-          Win Percentage: <input type='int' name='wininput' />  
+          Win Percentage: <input type='text' name='wininput' />  
         </p>
     
         <p>
@@ -137,7 +137,7 @@ My pipeline consists of a row iterator, a dictionary vectorizer, followed by a d
         </p>
 
         <p>
-          <input type="button" name="clickbtn" value="Display Result" onclick= 'basicadd()'>
+          <input type="button" name="clickbtn" value="Display Result" onclick= "basicadd()">
         </p>
       </form>
 </div>    
@@ -151,8 +151,8 @@ My pipeline consists of a row iterator, a dictionary vectorizer, followed by a d
     
 <script>
 includeHTML();
+</script>
     
-</script> 
 </body>
 </html>
 
