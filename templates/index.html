@@ -53,6 +53,7 @@
       clear: both;
       display: table;
     }
+      
   </style>
 </head>
 <body>
@@ -116,11 +117,29 @@ Raleigh-Durham with their Carolina Hurricanes hockey team has the worst loyalty,
 My pipeline consists of a row iterator, a dictionary vectorizer, followed by a decision tree regressor. The resulting model predicts that with outrageously high ticket prices, attendance will skyrocket, so that variable was removed. The new resulting model gives an R^2 score of 0.95. The model predicts the attendance of a sport in a city at a certain win percentage. We can create new teams such as a basketball team returning to Seattle or a football team in Orlando. </h3>
 </div>    
     
-<!-- Sixth Container -->    
-<div class="container-fluid bg-2 text-center">
-  <h2 class="margin">Make Your Own Team!</h2>
-  <h3> hi 
-        </h3>
+<!-- Sixth Container -->   
+<div class="container-fluid bg-3 text-right">
+<form id='input' method='POST' action='\basicadd' >
+        <p>
+          City: <input type='int' name='cityinput' />  
+        </p>
+    
+        <p>
+          Sport: <input type='int' name='sportinput' />  
+        </p>
+    
+        <p>
+          Win Percentage: <input type='int' name='wininput' />  
+        </p>
+    
+        <p>
+          Attendance: {{ attendancenumber }}
+        </p>
+
+        <p>
+          <input type="button" name="clickbtn" value="Display Result" onclick= 'basicadd()'>
+        </p>
+      </form>
 </div>    
     
 
@@ -132,6 +151,7 @@ My pipeline consists of a row iterator, a dictionary vectorizer, followed by a d
     
 <script>
 includeHTML();
+    
 </script> 
 </body>
 </html>

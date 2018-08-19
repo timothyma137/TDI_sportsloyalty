@@ -5,9 +5,6 @@ import simplejson as json
 import pandas as pd
 import quandl as qd
 import numpy as np
-
-from bokeh.plotting import figure, show, output_file
-from bokeh.embed import components,file_html
  
 app = Flask(__name__)
 
@@ -15,18 +12,17 @@ app.vars={}
 
 @app.route('/')
 def index():
-    return render_template('index.html')
+    return render_template('index.html', attendancenumber = 0)
 
-@app.route('/onepage', methods=['GET'])
-def retrievesymbol():
-    return render_template('interactivemap.html')
-
-@app.route('/showgraph', methods=['POST'])
-def stockgraph():
-    app.vars['stocksymbol'] = request.form['stocksymbol']
-    madegraph = makegraph(app.vars['stocksymbol'])
-    thescript, thediv = components(madegraph)
-    return render_template('stockgraph.html', script=thescript, div=thediv)
+@app.route('/basicadd', methods=['GET', 'POST'])
+def basicadd():
+    app.vars['cityinput'] = request.args.get('cityinput')
+    app.vars['sportinput'] = request.args.get('sportinput')
+    app.vars['wininput'] = request.args.get('wininput')
+    
+    attendancenumber= app.vars['cityinput']+app.vars['sportinput']+app.vars['wininput']
+    
+    return rendertemplate('index.html', attendancenumber = attendancenumber)
 
 if __name__ == "__main__":
     app.run(host='0.0.0.0')
