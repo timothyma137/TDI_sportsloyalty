@@ -4,7 +4,6 @@ import re
 import requests as rq
 import simplejson as json
 import pandas as pd
-import quandl as qd
 import numpy as np
 from sklearn.preprocessing import OneHotEncoder
 from sklearn.pipeline import Pipeline
