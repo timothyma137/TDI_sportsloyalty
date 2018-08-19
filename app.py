@@ -26,17 +26,14 @@ class RowIterator(TransformerMixin):
         def transform(self, X):
             return (row for _, row in X.iterrows())
 
-print('maybesir')
 @app.route('/')
 
 def index():
-    print('nosir')
     return render_template('index.html', attendancenumber = 0)
 
 
 @app.route('/basicadd', methods=['GET','POST'])
 def basicadd():
-    print('beginof')
     rawsportsdata = pd.read_excel('exceldata.xlsx')
     rsd = rawsportsdata
 
@@ -82,11 +79,9 @@ def basicadd():
     app.vars['sportinput'] = request.args.get('sportinput')
     app.vars['wininput'] = request.args.get('wininput')
     
-    print('yezzzzzzir')
     exampledata2=pd.DataFrame([['Anaheim Ducks', 2010, str(app.vars['cityinput']), 100, 'Supersonics', str(app.vars['sportinput']), 33,33, float(app.vars['wininput']), 80]])
-    print(exampledata2)
+
     theanswer= round(themodel.predict(exampledata2)[0], 1)
-    print(theanswer)
     
     if app.vars['cityinput'] not in [u'Atlanta',
  u'Baltimore',
