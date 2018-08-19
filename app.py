@@ -15,16 +15,16 @@ def index():
     return render_template('index.html', attendancenumber = 0)
 
 
-@app.route('/basicadd', methods=['GET', 'POST'])
+@app.route('/basicadd/', methods=['GET', 'POST'])
 def basicadd():
     if request.method == 'POST':
         app.vars['cityinput'] = request.args.get('cityinput')
         app.vars['sportinput'] = request.args.get('sportinput')
         app.vars['wininput'] = request.args.get('wininput')
 
-        attendancenumber= app.vars['cityinput']+app.vars['sportinput']+app.vars['wininput']
+        trynumber= app.vars['cityinput']+app.vars['sportinput']+app.vars['wininput']
 
-        return render_template('index.html', attendancenumber = attendancenumber)
+        return render_template('index.html', attendancenumber = trynumber)
 
 if __name__ == "__main__":
     app.run(host='0.0.0.0')

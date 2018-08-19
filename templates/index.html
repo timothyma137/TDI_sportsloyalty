@@ -119,27 +119,27 @@ My pipeline consists of a row iterator, a dictionary vectorizer, followed by a d
     
 <!-- Sixth Container -->   
 <div class="container-fluid bg-3 text-right">
-<form id='input' method='POST' action='/basicadd' >
+    <form id='input' method='POST' action='/basicadd' >
         <p>
-          City: <input type='text' name='cityinput' />  
-        </p>
-    
-        <p>
-          Sport: <input type='text' name='sportinput' />  
-        </p>
-    
-        <p>
-          Win Percentage: <input type='text' name='wininput' />  
-        </p>
-    
-        <p>
-          Attendance: {{ attendancenumber }}
+            City: <input type='text' name='cityinput' />  
         </p>
 
         <p>
-          <input type="button" name="clickbtn" value="Display Result" onclick= "basicadd()">
+            Sport: <input type='text' name='sportinput' />  
         </p>
-      </form>
+
+        <p>
+            Win Percentage: <input type='text' name='wininput' />  
+        </p>
+
+        <p>
+            Attendance: {{ attendancenumber }}
+        </p>
+
+        <p>
+            <input type="submit" name="clickbtn" value="Display Result">
+        </p>
+    </form>
 </div>    
     
 
