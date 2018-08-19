@@ -9,13 +9,16 @@
   <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+    
+    
   <style>
   body {
       font: 20px Montserrat, sans-serif;
       line-height: 1.8;
       color: #f5f6f7;
   }
-  p {font-size: 16px;}
+  p {font-size: 30px;}
   .margin {margin-bottom: 45px;}
   .bg-1 { 
       background-color: #1abc9c; /* Green */
@@ -37,83 +40,99 @@
       padding-top: 70px;
       padding-bottom: 70px;
   }
-  .navbar {
-      padding-top: 15px;
-      padding-bottom: 15px;
-      border: 0;
-      border-radius: 0;
-      margin-bottom: 0;
-      font-size: 12px;
-      letter-spacing: 5px;
-  }
-  .navbar-nav  li a:hover {
-      color: #1abc9c !important;
-  }
+  /* Three image containers (use 25% for four, and 50% for two, etc) */
+    .column {
+      float: left;
+      width: 50%;
+      padding: 5px;
+    }
+
+/* Clear floats after image containers */
+    .row::after {
+      content: "";
+      clear: both;
+      display: table;
+    }
   </style>
 </head>
 <body>
-
-<!-- Navbar -->
-<nav class="navbar navbar-default">
-  <div class="container">
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>                        
-      </button>
-      <a class="navbar-brand" href="#">Me</a>
-    </div>
-    <div class="collapse navbar-collapse" id="myNavbar">
-      <ul class="nav navbar-nav navbar-right">
-        <li><a href="#">WHO</a></li>
-        <li><a href="#">WHAT</a></li>
-        <li><a href="#">WHERE</a></li>
-      </ul>
-    </div>
-  </div>
-</nav>
-
+ 
 <!-- First Container -->
 <div class="container-fluid bg-1 text-center">
-  <h3 class="margin">Quantifying Fan Loyalty</h3>
-  <img  src="templates/images/ticketprice.jpg" class="img-responsive img-circle margin" style="display:inline" alt="Bird" width="350" height="350">
-  <h3>I'm an adventurer</h3>
+  <h1 class="margin">Quantifying Fan Loyalty</h1>
+  <img  src={{ url_for('static', filename='images/fanpic.png')}} class="img-responsive img-rectangle margin" style="display:inline" alt="Bird" width="400" height="400">
+   <h2 class="margin">Motivation</h2>
+  <h3>The North American sports industry pulls in tens of billions of dollars every year. By understanding fan behaviors for different teams, different sports, and different sports markets around the U.S., owners will be able to gauge the monetary pros and cons of moving a franchise across the country. Companies will better evaluate the value in sponsorships and advertisements. The presidents and managers of these teams will be able to predict whether improving their roster actually leads to profit. We also get to see which sports and which cities are most loyal to their teams.</h3>
 </div>
 
 <!-- Second Container -->
 <div class="container-fluid bg-2 text-center">
-  <h3 class="margin">What Am I?</h3>
-  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
-  <a href="#" class="btn btn-default btn-lg">
-    <span class="glyphicon glyphicon-search"></span> Search
-  </a>
+  <h2 class="margin">The Data</h2>
+  <h3>Data was collected from 14 different sources for the four major sports:  football, basketball, baseball, and hockey between 2001 and 2017. This included latitude, longitude, city, TV market, TV market size, win/loss records, ticket price, and attendance records. Ticket prices are adjusted for inflation. Especially troublesome were the many ways that a team can be referred to. For example, the New England Patriots can be referred to as “Patriots”, “New England” or “Boston” in different data sources. More trouble comes from teams that have moved, changed their name, or in the special case of the Charlotte Hornets, moved to become the New Orleans Hornets, then the Charlotte Bobcats are born in 2004, and then the New Orleans Hornets change their name to the New Orleans Pelicans and the Charlotte Bobcats change their name to the Charlotte Hornets. Whew! </h3>
 </div>
-
-<!-- Third Container (Grid) -->
-<div class="container-fluid bg-3 text-center">    
-  <h3 class="margin">Where To Find Me?</h3><br>
-  <div class="row">
-    <div class="col-sm-4">
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-      <img src="birds1.jpg" class="img-responsive margin" style="width:100%" alt="Image">
-    </div>
-    <div class="col-sm-4"> 
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-      <img src="birds2.jpg" class="img-responsive margin" style="width:100%" alt="Image">
-    </div>
-    <div class="col-sm-4"> 
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-      <img src="birds3.jpg" class="img-responsive margin" style="width:100%" alt="Image">
-    </div>
+    
+<!-- Third Container -->
+<div class="container-fluid bg-1 text-center">
+  <h2 class="margin">First Look at the Data</h2>
+    <div class="row">
+  <div class="column">
+    <img src={{ url_for('static', filename='images/teamsuccess.jpg')}} alt="Snow" style="width:95%">
+  </div>
+  <div class="column">
+    <img src={{ url_for('static', filename='images/ticketprice.jpg')}} alt="Forest" style="width:95%">
   </div>
 </div>
+  
+   <h2 class="margin">Motivation</h2>
+  <h3>How does attendance depend on team success? For football and baseball, there’s not much of a relationship. Football consistently has very high attendance no matter how teams perform, while baseball has a wide range of attendance that doesn’t depend on wins and losses. As a whole, basketball and hockey each have a slight correlation that indicates that winning more games leads to higher attendance.
 
+When looking at the totality of all sports, it appears that higher ticket prices correlate with higher attendance, but this only happens because of the segmentation in the sports. Baseball attendance varies greatly with low prices, while football has high attendance with high prices. Hockey and basketball fill out the middle with middle ticket prices and relatively high attendance with only some ticket prices rivaling those of football.
+</h3>
+</div>
+
+<!-- Fourth Container -->
+<div class="container-fluid bg-2 text-center">
+  <h2 class="margin">Loyalty by City</h2>
+    
+<iframe src={{ url_for('static', filename='images/withcanadamap.html')}} width="900" height="500"></iframe>
+    
+  <h3>Click around on this interactive map. The size of the circle dictates high average attendance for that sport for that year. The color of the circle dictates fan loyalty given by attendance/ win percentage starting with white as the lowest, then pink, red, orange, yellow, green, blue, purple, to black as the highest loyalty. This places a value on fans who go to games despite losing seasons. <br />
+      <br />
+      
+      Boston sports teams consistently have the highest average attendance, but that can be explained by recent dominance in all of their sports. Tampa Bay has the lowest attendance of any city, while Phoenix has the lowest attendance of any city with all four major sports. <br />
+      <br />
+
+Raleigh-Durham with their Carolina Hurricanes hockey team has the worst loyalty, and San Antonio also has a low score, but that is because they only have one team and that one team is the consistently winning San Antonio Spurs. Phoenix once again has the poorest loyalty for a city with four sports. Atlanta and Pittsburg are not so hot either. On the opposite side, Jacksonville and St. Louis have very loyal fans, while Detroit has the most loyal fans for a city with all four sports followed by Washington D.C., although Washington D.C. is famous to have many fans from the opposing team to come and cheer.
+ </h3>
+</div>    
+
+    
+<!-- Fifth Container -->    
+<div class="container-fluid bg-1 text-center">
+  <h2 class="margin">Methodology</h2>
+  <h3>Each team and each year account for a single data point. When a team moves, those teams are then considered as the end of one team and the start of a new. Teams that have simple changed their name are considered the same team. If a team for a certain year is missing its attendance figures or ticket figures, that data point is thrown out. With 128 teams in the four sports and 17 years of records, I reduced the data down to city, sport, attendance for a year, ticket price for a year, and win percentage for a year. <br />
+      <br />
+
+My pipeline consists of a row iterator, a dictionary vectorizer, followed by a decision tree regressor. The resulting model predicts that with outrageously high ticket prices, attendance will skyrocket, so that variable was removed. The new resulting model gives an R^2 score of 0.95. The model predicts the attendance of a sport in a city at a certain win percentage. We can create new teams such as a basketball team returning to Seattle or a football team in Orlando. </h3>
+</div>    
+    
+<!-- Sixth Container -->    
+<div class="container-fluid bg-2 text-center">
+  <h2 class="margin">Make Your Own Team!</h2>
+  <h3> hi 
+        </h3>
+</div>    
+    
+
+    
 <!-- Footer -->
 <footer class="container-fluid bg-4 text-center">
   <p>Bootstrap Theme Made By <a href="https://www.w3schools.com">www.w3schools.com</a></p> 
 </footer>
-
+    
+<script>
+includeHTML();
+</script> 
 </body>
 </html>
 

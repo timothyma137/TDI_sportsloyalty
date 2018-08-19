@@ -1,0 +1,1437 @@
+
+        <!DOCTYPE html>
+        <head>
+            
+        
+            <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+        
+            
+        
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.3/leaflet.js"></script>
+        
+        
+        
+            
+        
+            <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+        
+        
+        
+            
+        
+            <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+        
+        
+        
+            
+        
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.min.js"></script>
+        
+        
+        
+            
+        
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/0.4.0/leaflet.markercluster-src.js"></script>
+        
+        
+        
+            
+        
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/0.4.0/leaflet.markercluster.js"></script>
+        
+        
+        
+            
+        
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.3/leaflet.css" />
+        
+        
+        
+            
+        
+            <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" />
+        
+        
+        
+            
+        
+            <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css" />
+        
+        
+        
+            
+        
+            <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" />
+        
+        
+        
+            
+        
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css" />
+        
+        
+        
+            
+        
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/0.4.0/MarkerCluster.Default.css" />
+        
+        
+        
+            
+        
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/0.4.0/MarkerCluster.css" />
+        
+        
+        
+            
+        
+            <link rel="stylesheet" href="https://raw.githubusercontent.com/python-visualization/folium/master/folium/templates/leaflet.awesome.rotate.css" />
+        
+        
+        
+            
+            <style>
+
+            html, body {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+                }
+
+            #map {
+                position:absolute;
+                top:0;
+                bottom:0;
+                right:0;
+                left:0;
+                }
+            </style>
+            
+        
+            
+            <style> #map_a19afbce7d1b41749d905d88e73fe4f8 {
+                position : relative;
+                width : 100.0%;
+                height: 100.0%;
+                left: 0.0%;
+                top: 0.0%;
+                }
+            </style>
+        
+        
+        
+        </head>
+        <body>
+            
+        
+            
+            <div class="folium-map" id="map_a19afbce7d1b41749d905d88e73fe4f8" ></div>
+        
+        
+        
+        </body>
+        <script>
+            
+        
+            
+
+            var southWest = L.latLng(-90, -180);
+            var northEast = L.latLng(90, 180);
+            var bounds = L.latLngBounds(southWest, northEast);
+
+            var map_a19afbce7d1b41749d905d88e73fe4f8 = L.map('map_a19afbce7d1b41749d905d88e73fe4f8', {
+                                           center:[40.738,-93.98],
+                                           zoom: 4,
+                                           maxBounds: bounds,
+                                           layers: [],
+                                           crs: L.CRS.EPSG3857
+                                         });
+            
+        
+        
+            
+            var tile_layer_22c858f912534002a9a65fca3688afb0 = L.tileLayer(
+                'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',
+                {
+                    maxZoom: 18,
+                    minZoom: 1,
+                    attribution: 'Data by <a href="http://openstreetmap.org">OpenStreetMap</a>, under <a href="http://www.openstreetmap.org/copyright">ODbL</a>.',
+                    detectRetina: false
+                    }
+                ).addTo(map_a19afbce7d1b41749d905d88e73fe4f8);
+
+        
+        
+            
+
+            var circle_marker_ac54deb403d1457ba3766a5429d3220a = L.circle(
+                [35.8033,-78.7219],
+                37200.1875644,
+                {
+                    color: 'black',
+                    fillColor: 'white',
+                    fillOpacity: 0.6
+                    }
+                )
+                .addTo(map_a19afbce7d1b41749d905d88e73fe4f8);
+            
+        
+            
+            var popup_77eb3811b7194b83a0dc489b3c81ff33 = L.popup({maxWidth: '300'});
+
+            
+                var html_131927e995844db5a6669b3378f507ac = $('         <div id="html_131927e995844db5a6669b3378f507ac"                 style="width: 100.0%; height: 100.0%;">                 Raleigh-Durham has an attendance score of 0.88 and loyalty score of 1.4</div>                 ')[0];
+                popup_77eb3811b7194b83a0dc489b3c81ff33.setContent(html_131927e995844db5a6669b3378f507ac);
+            
+
+            circle_marker_ac54deb403d1457ba3766a5429d3220a.bindPopup(popup_77eb3811b7194b83a0dc489b3c81ff33);
+
+            
+        
+        
+            
+
+            var circle_marker_18a9a45a1e6c4dc08dbabb20edd9b696 = L.circle(
+                [45.4961,-73.5694],
+                26569.0361394,
+                {
+                    color: 'black',
+                    fillColor: 'white',
+                    fillOpacity: 0.6
+                    }
+                )
+                .addTo(map_a19afbce7d1b41749d905d88e73fe4f8);
+            
+        
+            
+            var popup_087d6675e5da4abea4e3c50ed46d13a6 = L.popup({maxWidth: '300'});
+
+            
+                var html_c994d8a71bc94317b2ffe811dbc50a9c = $('         <div id="html_c994d8a71bc94317b2ffe811dbc50a9c"                 style="width: 100.0%; height: 100.0%;">                 Montreal has an attendance score of 0.86 and loyalty score of 1.42</div>                 ')[0];
+                popup_087d6675e5da4abea4e3c50ed46d13a6.setContent(html_c994d8a71bc94317b2ffe811dbc50a9c);
+            
+
+            circle_marker_18a9a45a1e6c4dc08dbabb20edd9b696.bindPopup(popup_087d6675e5da4abea4e3c50ed46d13a6);
+
+            
+        
+        
+            
+
+            var circle_marker_719a8f18758f4a20a2f14dbe28e66be6 = L.circle(
+                [29.4269,-98.4375],
+                131466.303496,
+                {
+                    color: 'black',
+                    fillColor: 'white',
+                    fillOpacity: 0.6
+                    }
+                )
+                .addTo(map_a19afbce7d1b41749d905d88e73fe4f8);
+            
+        
+            
+            var popup_99ad46768c7c47038d4b062091332cbd = L.popup({maxWidth: '300'});
+
+            
+                var html_41e67656f4374b8d9c70ee3b8990362d = $('         <div id="html_41e67656f4374b8d9c70ee3b8990362d"                 style="width: 100.0%; height: 100.0%;">                 San Antonio has an attendance score of 1.09 and loyalty score of 1.44</div>                 ')[0];
+                popup_99ad46768c7c47038d4b062091332cbd.setContent(html_41e67656f4374b8d9c70ee3b8990362d);
+            
+
+            circle_marker_719a8f18758f4a20a2f14dbe28e66be6.bindPopup(popup_99ad46768c7c47038d4b062091332cbd);
+
+            
+        
+        
+            
+
+            var circle_marker_5bdc8d76849c4b91bb300679b1344349 = L.circle(
+                [39.9693,-83.0061],
+                33168.0009056,
+                {
+                    color: 'black',
+                    fillColor: 'pink',
+                    fillOpacity: 0.6
+                    }
+                )
+                .addTo(map_a19afbce7d1b41749d905d88e73fe4f8);
+            
+        
+            
+            var popup_c39a49c20a634427b8b46fd1a61fcbf4 = L.popup({maxWidth: '300'});
+
+            
+                var html_340c6e3325f64e638c21ff3ded306331 = $('         <div id="html_340c6e3325f64e638c21ff3ded306331"                 style="width: 100.0%; height: 100.0%;">                 Columbus has an attendance score of 0.87 and loyalty score of 1.58</div>                 ')[0];
+                popup_c39a49c20a634427b8b46fd1a61fcbf4.setContent(html_340c6e3325f64e638c21ff3ded306331);
+            
+
+            circle_marker_5bdc8d76849c4b91bb300679b1344349.bindPopup(popup_c39a49c20a634427b8b46fd1a61fcbf4);
+
+            
+        
+        
+            
+
+            var circle_marker_27b95eea6a6843c4821db5627fe285c1 = L.circle(
+                [25.88838125,-80.23651875],
+                37313.5217537,
+                {
+                    color: 'black',
+                    fillColor: 'red',
+                    fillOpacity: 0.6
+                    }
+                )
+                .addTo(map_a19afbce7d1b41749d905d88e73fe4f8);
+            
+        
+            
+            var popup_ca8ce9c81c6045c5908fce7d9eb3a71c = L.popup({maxWidth: '300'});
+
+            
+                var html_b8b489c120d64c27a2649e05b14b5677 = $('         <div id="html_b8b489c120d64c27a2649e05b14b5677"                 style="width: 100.0%; height: 100.0%;">                 Miami has an attendance score of 0.88 and loyalty score of 1.63</div>                 ')[0];
+                popup_ca8ce9c81c6045c5908fce7d9eb3a71c.setContent(html_b8b489c120d64c27a2649e05b14b5677);
+            
+
+            circle_marker_27b95eea6a6843c4821db5627fe285c1.bindPopup(popup_ca8ce9c81c6045c5908fce7d9eb3a71c);
+
+            
+        
+        
+            
+
+            var circle_marker_6dec7d814f5746268833eb97696189e4 = L.circle(
+                [45.2969,-75.9272],
+                116457.222166,
+                {
+                    color: 'black',
+                    fillColor: 'red',
+                    fillOpacity: 0.6
+                    }
+                )
+                .addTo(map_a19afbce7d1b41749d905d88e73fe4f8);
+            
+        
+            
+            var popup_979c3914f1f34712809c44fa9d4d20de = L.popup({maxWidth: '300'});
+
+            
+                var html_23f9f9c9ca48482c8acb450bb49b0733 = $('         <div id="html_23f9f9c9ca48482c8acb450bb49b0733"                 style="width: 100.0%; height: 100.0%;">                 Ottawa has an attendance score of 1.06 and loyalty score of 1.64</div>                 ')[0];
+                popup_979c3914f1f34712809c44fa9d4d20de.setContent(html_23f9f9c9ca48482c8acb450bb49b0733);
+            
+
+            circle_marker_6dec7d814f5746268833eb97696189e4.bindPopup(popup_979c3914f1f34712809c44fa9d4d20de);
+
+            
+        
+        
+            
+
+            var circle_marker_5724befb71ed4d2885e0e63a97245e54 = L.circle(
+                [49.2778,-123.109],
+                121260.353579,
+                {
+                    color: 'black',
+                    fillColor: 'red',
+                    fillOpacity: 0.6
+                    }
+                )
+                .addTo(map_a19afbce7d1b41749d905d88e73fe4f8);
+            
+        
+            
+            var popup_3d843b2f3d6e48ceacf1e26899518be0 = L.popup({maxWidth: '300'});
+
+            
+                var html_967c177291e24b6a9c5a3b890e97858c = $('         <div id="html_967c177291e24b6a9c5a3b890e97858c"                 style="width: 100.0%; height: 100.0%;">                 Vancouver has an attendance score of 1.07 and loyalty score of 1.65</div>                 ')[0];
+                popup_3d843b2f3d6e48ceacf1e26899518be0.setContent(html_967c177291e24b6a9c5a3b890e97858c);
+            
+
+            circle_marker_5724befb71ed4d2885e0e63a97245e54.bindPopup(popup_3d843b2f3d6e48ceacf1e26899518be0);
+
+            
+        
+        
+            
+
+            var circle_marker_b09837a3d79e43e99368cdd1f3f27eea = L.circle(
+                [35.1383,-90.0506],
+                55818.3214728,
+                {
+                    color: 'black',
+                    fillColor: 'red',
+                    fillOpacity: 0.6
+                    }
+                )
+                .addTo(map_a19afbce7d1b41749d905d88e73fe4f8);
+            
+        
+            
+            var popup_8a6ca5feba424cfe8096908bba199426 = L.popup({maxWidth: '300'});
+
+            
+                var html_33d34444f9af45dbb73c9614a5cff0ee = $('         <div id="html_33d34444f9af45dbb73c9614a5cff0ee"                 style="width: 100.0%; height: 100.0%;">                 Memphis has an attendance score of 0.92 and loyalty score of 1.66</div>                 ')[0];
+                popup_8a6ca5feba424cfe8096908bba199426.setContent(html_33d34444f9af45dbb73c9614a5cff0ee);
+            
+
+            circle_marker_b09837a3d79e43e99368cdd1f3f27eea.bindPopup(popup_8a6ca5feba424cfe8096908bba199426);
+
+            
+        
+        
+            
+
+            var circle_marker_9add6e5a2ef244af9044824b23c13532 = L.circle(
+                [33.479272,-112.14604],
+                56816.1195137,
+                {
+                    color: 'black',
+                    fillColor: 'red',
+                    fillOpacity: 0.6
+                    }
+                )
+                .addTo(map_a19afbce7d1b41749d905d88e73fe4f8);
+            
+        
+            
+            var popup_425bcd4ac790415e9210378704033e76 = L.popup({maxWidth: '300'});
+
+            
+                var html_ef84aade5b0348cb96a9b6ed75b72421 = $('         <div id="html_ef84aade5b0348cb96a9b6ed75b72421"                 style="width: 100.0%; height: 100.0%;">                 Phoenix has an attendance score of 0.93 and loyalty score of 1.66</div>                 ')[0];
+                popup_425bcd4ac790415e9210378704033e76.setContent(html_ef84aade5b0348cb96a9b6ed75b72421);
+            
+
+            circle_marker_9add6e5a2ef244af9044824b23c13532.bindPopup(popup_425bcd4ac790415e9210378704033e76);
+
+            
+        
+        
+            
+
+            var circle_marker_ac8d216483994fec8ee946848d46311e = L.circle(
+                [33.74778,-84.3947975],
+                58353.5230547,
+                {
+                    color: 'black',
+                    fillColor: 'red',
+                    fillOpacity: 0.6
+                    }
+                )
+                .addTo(map_a19afbce7d1b41749d905d88e73fe4f8);
+            
+        
+            
+            var popup_68019bd486394b679b0d6baa3bead986 = L.popup({maxWidth: '300'});
+
+            
+                var html_3377780724484a90a61b79dbb8b32f2d = $('         <div id="html_3377780724484a90a61b79dbb8b32f2d"                 style="width: 100.0%; height: 100.0%;">                 Atlanta has an attendance score of 0.93 and loyalty score of 1.66</div>                 ')[0];
+                popup_68019bd486394b679b0d6baa3bead986.setContent(html_3377780724484a90a61b79dbb8b32f2d);
+            
+
+            circle_marker_ac8d216483994fec8ee946848d46311e.bindPopup(popup_68019bd486394b679b0d6baa3bead986);
+
+            
+        
+        
+            
+
+            var circle_marker_8a013f6f79bd431e9dd203413cd4e89b = L.circle(
+                [40.4450297297,-80.0044756757],
+                82234.5632743,
+                {
+                    color: 'black',
+                    fillColor: 'red',
+                    fillOpacity: 0.6
+                    }
+                )
+                .addTo(map_a19afbce7d1b41749d905d88e73fe4f8);
+            
+        
+            
+            var popup_779ca9876c0f44eea4fce296e14d9d15 = L.popup({maxWidth: '300'});
+
+            
+                var html_b863f72825ff4d09a65bc65858249b8f = $('         <div id="html_b863f72825ff4d09a65bc65858249b8f"                 style="width: 100.0%; height: 100.0%;">                 Pittsburg has an attendance score of 0.98 and loyalty score of 1.71</div>                 ')[0];
+                popup_779ca9876c0f44eea4fce296e14d9d15.setContent(html_b863f72825ff4d09a65bc65858249b8f);
+            
+
+            circle_marker_8a013f6f79bd431e9dd203413cd4e89b.bindPopup(popup_779ca9876c0f44eea4fce296e14d9d15);
+
+            
+        
+        
+            
+
+            var circle_marker_9a0776128a1d443b920f4524aa0e117e = L.circle(
+                [32.7655795455,-96.9796727273],
+                95089.6314255,
+                {
+                    color: 'black',
+                    fillColor: 'red',
+                    fillOpacity: 0.6
+                    }
+                )
+                .addTo(map_a19afbce7d1b41749d905d88e73fe4f8);
+            
+        
+            
+            var popup_54bd3af11c994d5c92a359cb573a9f7b = L.popup({maxWidth: '300'});
+
+            
+                var html_afeb03cfb5694468b251e29a43b0b710 = $('         <div id="html_afeb03cfb5694468b251e29a43b0b710"                 style="width: 100.0%; height: 100.0%;">                 Dallas has an attendance score of 1.01 and loyalty score of 1.73</div>                 ')[0];
+                popup_54bd3af11c994d5c92a359cb573a9f7b.setContent(html_afeb03cfb5694468b251e29a43b0b710);
+            
+
+            circle_marker_9a0776128a1d443b920f4524aa0e117e.bindPopup(popup_54bd3af11c994d5c92a359cb573a9f7b);
+
+            
+        
+        
+            
+
+            var circle_marker_7e05b6cef3ef46628d88723ae9acbda7 = L.circle(
+                [39.7503522727,-105.005090909],
+                73588.676228,
+                {
+                    color: 'black',
+                    fillColor: 'red',
+                    fillOpacity: 0.6
+                    }
+                )
+                .addTo(map_a19afbce7d1b41749d905d88e73fe4f8);
+            
+        
+            
+            var popup_9132d10d830d49a8ad03b16fc68f6daa = L.popup({maxWidth: '300'});
+
+            
+                var html_c7ffc449144c4087b14c51b39e895619 = $('         <div id="html_c7ffc449144c4087b14c51b39e895619"                 style="width: 100.0%; height: 100.0%;">                 Denver has an attendance score of 0.96 and loyalty score of 1.73</div>                 ')[0];
+                popup_9132d10d830d49a8ad03b16fc68f6daa.setContent(html_c7ffc449144c4087b14c51b39e895619);
+            
+
+            circle_marker_7e05b6cef3ef46628d88723ae9acbda7.bindPopup(popup_9132d10d830d49a8ad03b16fc68f6daa);
+
+            
+        
+        
+            
+
+            var circle_marker_3f2cbce72ac74d6ea5d19d9d063ac875 = L.circle(
+                [39.2817777778,-76.6220444444],
+                63570.1950637,
+                {
+                    color: 'black',
+                    fillColor: 'red',
+                    fillOpacity: 0.6
+                    }
+                )
+                .addTo(map_a19afbce7d1b41749d905d88e73fe4f8);
+            
+        
+            
+            var popup_bb1c610d46d5447e81be161944f965a3 = L.popup({maxWidth: '300'});
+
+            
+                var html_98c7b5c04d6c4ab99ef6430875d0b5d3 = $('         <div id="html_98c7b5c04d6c4ab99ef6430875d0b5d3"                 style="width: 100.0%; height: 100.0%;">                 Baltimore has an attendance score of 0.94 and loyalty score of 1.73</div>                 ')[0];
+                popup_bb1c610d46d5447e81be161944f965a3.setContent(html_98c7b5c04d6c4ab99ef6430875d0b5d3);
+            
+
+            circle_marker_3f2cbce72ac74d6ea5d19d9d063ac875.bindPopup(popup_bb1c610d46d5447e81be161944f965a3);
+
+            
+        
+        
+            
+
+            var circle_marker_db835aae9b514196ae7096018f7d6dfd = L.circle(
+                [51.0375,-114.052],
+                114807.532711,
+                {
+                    color: 'black',
+                    fillColor: 'orange',
+                    fillOpacity: 0.6
+                    }
+                )
+                .addTo(map_a19afbce7d1b41749d905d88e73fe4f8);
+            
+        
+            
+            var popup_516b9cf0f59946ed97301107660d877c = L.popup({maxWidth: '300'});
+
+            
+                var html_788814bd31f44bbbb6a89846e8318e46 = $('         <div id="html_788814bd31f44bbbb6a89846e8318e46"                 style="width: 100.0%; height: 100.0%;">                 Calgary has an attendance score of 1.06 and loyalty score of 1.75</div>                 ')[0];
+                popup_516b9cf0f59946ed97301107660d877c.setContent(html_788814bd31f44bbbb6a89846e8318e46);
+            
+
+            circle_marker_db835aae9b514196ae7096018f7d6dfd.bindPopup(popup_516b9cf0f59946ed97301107660d877c);
+
+            
+        
+        
+            
+
+            var circle_marker_a2d8965febc64a89bd3f119f0058cb8d = L.circle(
+                [49.8928,-97.1436],
+                109107.253961,
+                {
+                    color: 'black',
+                    fillColor: 'orange',
+                    fillOpacity: 0.6
+                    }
+                )
+                .addTo(map_a19afbce7d1b41749d905d88e73fe4f8);
+            
+        
+            
+            var popup_ecdd374c2c404946996228a95eae358d = L.popup({maxWidth: '300'});
+
+            
+                var html_6989797c649042479d6b657c20b92c2a = $('         <div id="html_6989797c649042479d6b657c20b92c2a"                 style="width: 100.0%; height: 100.0%;">                 Winnipeg has an attendance score of 1.04 and loyalty score of 1.76</div>                 ')[0];
+                popup_ecdd374c2c404946996228a95eae358d.setContent(html_6989797c649042479d6b657c20b92c2a);
+            
+
+            circle_marker_a2d8965febc64a89bd3f119f0058cb8d.bindPopup(popup_ecdd374c2c404946996228a95eae358d);
+
+            
+        
+        
+            
+
+            var circle_marker_f24bfd3d067b47ddbd82866aa0426139 = L.circle(
+                [39.762452381,-86.1587238095],
+                87408.6661849,
+                {
+                    color: 'black',
+                    fillColor: 'orange',
+                    fillOpacity: 0.6
+                    }
+                )
+                .addTo(map_a19afbce7d1b41749d905d88e73fe4f8);
+            
+        
+            
+            var popup_a10feca82e8042ba8462e24cf80760e3 = L.popup({maxWidth: '300'});
+
+            
+                var html_c0ef3a877fa64f4da69a561c542d9ce5 = $('         <div id="html_c0ef3a877fa64f4da69a561c542d9ce5"                 style="width: 100.0%; height: 100.0%;">                 Indianapolis has an attendance score of 0.99 and loyalty score of 1.78</div>                 ')[0];
+                popup_a10feca82e8042ba8462e24cf80760e3.setContent(html_c0ef3a877fa64f4da69a561c542d9ce5);
+            
+
+            circle_marker_f24bfd3d067b47ddbd82866aa0426139.bindPopup(popup_a10feca82e8042ba8462e24cf80760e3);
+
+            
+        
+        
+            
+
+            var circle_marker_9136425ee34d41269dfe16d8c8f0bbc3 = L.circle(
+                [32.74304375,-117.13965625],
+                58522.9226068,
+                {
+                    color: 'black',
+                    fillColor: 'orange',
+                    fillOpacity: 0.6
+                    }
+                )
+                .addTo(map_a19afbce7d1b41749d905d88e73fe4f8);
+            
+        
+            
+            var popup_8ab9ac857a0c4b4bbaa55a1bf3617fb7 = L.popup({maxWidth: '300'});
+
+            
+                var html_65ec7d628c6b4a64b8107e8872947f4e = $('         <div id="html_65ec7d628c6b4a64b8107e8872947f4e"                 style="width: 100.0%; height: 100.0%;">                 San Diego has an attendance score of 0.93 and loyalty score of 1.78</div>                 ')[0];
+                popup_8ab9ac857a0c4b4bbaa55a1bf3617fb7.setContent(html_65ec7d628c6b4a64b8107e8872947f4e);
+            
+
+            circle_marker_9136425ee34d41269dfe16d8c8f0bbc3.bindPopup(popup_8ab9ac857a0c4b4bbaa55a1bf3617fb7);
+
+            
+        
+        
+            
+
+            var circle_marker_208b280d2f404e74b817827bc68bdc2a = L.circle(
+                [39.0969740741,-84.5110888889],
+                61358.1207609,
+                {
+                    color: 'black',
+                    fillColor: 'orange',
+                    fillOpacity: 0.6
+                    }
+                )
+                .addTo(map_a19afbce7d1b41749d905d88e73fe4f8);
+            
+        
+            
+            var popup_3994d9872f4a435b8d07ea33d5457a28 = L.popup({maxWidth: '300'});
+
+            
+                var html_c9d357c03cdf42419a3b524a25b0e0e0 = $('         <div id="html_c9d357c03cdf42419a3b524a25b0e0e0"                 style="width: 100.0%; height: 100.0%;">                 Cincinnati has an attendance score of 0.94 and loyalty score of 1.79</div>                 ')[0];
+                popup_3994d9872f4a435b8d07ea33d5457a28.setContent(html_c9d357c03cdf42419a3b524a25b0e0e0);
+            
+
+            circle_marker_208b280d2f404e74b817827bc68bdc2a.bindPopup(popup_3994d9872f4a435b8d07ea33d5457a28);
+
+            
+        
+        
+            
+
+            var circle_marker_274b234a6488487481453e15c7f0b040 = L.circle(
+                [35.4633,-97.515],
+                132653.324256,
+                {
+                    color: 'black',
+                    fillColor: 'orange',
+                    fillOpacity: 0.6
+                    }
+                )
+                .addTo(map_a19afbce7d1b41749d905d88e73fe4f8);
+            
+        
+            
+            var popup_612a6234793b415b888278ec0c66e2eb = L.popup({maxWidth: '300'});
+
+            
+                var html_5727d821139f45a7b5129d0ec10e0842 = $('         <div id="html_5727d821139f45a7b5129d0ec10e0842"                 style="width: 100.0%; height: 100.0%;">                 Oklahoma City has an attendance score of 1.09 and loyalty score of 1.79</div>                 ')[0];
+                popup_612a6234793b415b888278ec0c66e2eb.setContent(html_5727d821139f45a7b5129d0ec10e0842);
+            
+
+            circle_marker_274b234a6488487481453e15c7f0b040.bindPopup(popup_612a6234793b415b888278ec0c66e2eb);
+
+            
+        
+        
+            
+
+            var circle_marker_a3d4064c1d3b4aa0a0ba8a15d90b2783 = L.circle(
+                [27.8715513514,-82.5584189189],
+                8350.92669085,
+                {
+                    color: 'black',
+                    fillColor: 'orange',
+                    fillOpacity: 0.6
+                    }
+                )
+                .addTo(map_a19afbce7d1b41749d905d88e73fe4f8);
+            
+        
+            
+            var popup_afc25935ae774f91acc9b38ee642c140 = L.popup({maxWidth: '300'});
+
+            
+                var html_dd5b5358dc0a4f02930286bb9607fd06 = $('         <div id="html_dd5b5358dc0a4f02930286bb9607fd06"                 style="width: 100.0%; height: 100.0%;">                 Tampa Bay has an attendance score of 0.82 and loyalty score of 1.81</div>                 ')[0];
+                popup_afc25935ae774f91acc9b38ee642c140.setContent(html_dd5b5358dc0a4f02930286bb9607fd06);
+            
+
+            circle_marker_a3d4064c1d3b4aa0a0ba8a15d90b2783.bindPopup(popup_afc25935ae774f91acc9b38ee642c140);
+
+            
+        
+        
+            
+
+            var circle_marker_2ef238a73d6049cca29ecd8df0cec27c = L.circle(
+                [43.642365,-79.38363],
+                65217.1821878,
+                {
+                    color: 'black',
+                    fillColor: 'orange',
+                    fillOpacity: 0.6
+                    }
+                )
+                .addTo(map_a19afbce7d1b41749d905d88e73fe4f8);
+            
+        
+            
+            var popup_af272f06958846c08f88c6f96e6b3fbd = L.popup({maxWidth: '300'});
+
+            
+                var html_52d768801aa24a74b95551a943359b8a = $('         <div id="html_52d768801aa24a74b95551a943359b8a"                 style="width: 100.0%; height: 100.0%;">                 Toronto has an attendance score of 0.94 and loyalty score of 1.82</div>                 ')[0];
+                popup_af272f06958846c08f88c6f96e6b3fbd.setContent(html_52d768801aa24a74b95551a943359b8a);
+            
+
+            circle_marker_2ef238a73d6049cca29ecd8df0cec27c.bindPopup(popup_af272f06958846c08f88c6f96e6b3fbd);
+
+            
+        
+        
+            
+
+            var circle_marker_cd21ed40505e402fa511156f8f6b56af = L.circle(
+                [47.5932424242,-122.332],
+                82720.9349157,
+                {
+                    color: 'black',
+                    fillColor: 'orange',
+                    fillOpacity: 0.6
+                    }
+                )
+                .addTo(map_a19afbce7d1b41749d905d88e73fe4f8);
+            
+        
+            
+            var popup_1094380a14b848838a3a8b22d6c4ea89 = L.popup({maxWidth: '300'});
+
+            
+                var html_917c347292fe4efc89c419e436718991 = $('         <div id="html_917c347292fe4efc89c419e436718991"                 style="width: 100.0%; height: 100.0%;">                 Seattle has an attendance score of 0.98 and loyalty score of 1.84</div>                 ')[0];
+                popup_1094380a14b848838a3a8b22d6c4ea89.setContent(html_917c347292fe4efc89c419e436718991);
+            
+
+            circle_marker_cd21ed40505e402fa511156f8f6b56af.bindPopup(popup_1094380a14b848838a3a8b22d6c4ea89);
+
+            
+        
+        
+            
+
+            var circle_marker_ac001f3208db411d92d367092c7b9136 = L.circle(
+                [29.949852381,-90.0818190476],
+                86485.0064957,
+                {
+                    color: 'black',
+                    fillColor: 'orange',
+                    fillOpacity: 0.6
+                    }
+                )
+                .addTo(map_a19afbce7d1b41749d905d88e73fe4f8);
+            
+        
+            
+            var popup_4a88d51d2d9f4a51ae969fa34b85b46a = L.popup({maxWidth: '300'});
+
+            
+                var html_ff60b8a7d3b54435b1e1a24df48543f0 = $('         <div id="html_ff60b8a7d3b54435b1e1a24df48543f0"                 style="width: 100.0%; height: 100.0%;">                 New Orleans has an attendance score of 0.99 and loyalty score of 1.85</div>                 ')[0];
+                popup_4a88d51d2d9f4a51ae969fa34b85b46a.setContent(html_ff60b8a7d3b54435b1e1a24df48543f0);
+            
+
+            circle_marker_ac001f3208db411d92d367092c7b9136.bindPopup(popup_4a88d51d2d9f4a51ae969fa34b85b46a);
+
+            
+        
+        
+            
+
+            var circle_marker_acb65f1a4d094c87b517a3519e34a9b0 = L.circle(
+                [33.9622054054,-118.120108108],
+                125091.717935,
+                {
+                    color: 'black',
+                    fillColor: 'orange',
+                    fillOpacity: 0.6
+                    }
+                )
+                .addTo(map_a19afbce7d1b41749d905d88e73fe4f8);
+            
+        
+            
+            var popup_6e4ed03bba0e4b3ebad614936885332d = L.popup({maxWidth: '300'});
+
+            
+                var html_7ed4391174a14be68aeb1244bf98fa65 = $('         <div id="html_7ed4391174a14be68aeb1244bf98fa65"                 style="width: 100.0%; height: 100.0%;">                 Los Angeles has an attendance score of 1.08 and loyalty score of 1.86</div>                 ')[0];
+                popup_6e4ed03bba0e4b3ebad614936885332d.setContent(html_7ed4391174a14be68aeb1244bf98fa65);
+            
+
+            circle_marker_acb65f1a4d094c87b517a3519e34a9b0.bindPopup(popup_6e4ed03bba0e4b3ebad614936885332d);
+
+            
+        
+        
+            
+
+            var circle_marker_d243854b85084cd784fc797192645291 = L.circle(
+                [40.7676715596,-73.9690522936],
+                101937.950107,
+                {
+                    color: 'black',
+                    fillColor: 'orange',
+                    fillOpacity: 0.6
+                    }
+                )
+                .addTo(map_a19afbce7d1b41749d905d88e73fe4f8);
+            
+        
+            
+            var popup_c86ffffa47ca44b0880eba8d8f859e74 = L.popup({maxWidth: '300'});
+
+            
+                var html_f5131ac1c3ef419383e19965674dd97e = $('         <div id="html_f5131ac1c3ef419383e19965674dd97e"                 style="width: 100.0%; height: 100.0%;">                 New York has an attendance score of 1.03 and loyalty score of 1.88</div>                 ')[0];
+                popup_c86ffffa47ca44b0880eba8d8f859e74.setContent(html_f5131ac1c3ef419383e19965674dd97e);
+            
+
+            circle_marker_d243854b85084cd784fc797192645291.bindPopup(popup_c86ffffa47ca44b0880eba8d8f859e74);
+
+            
+        
+        
+            
+
+            var circle_marker_53da086a61dd4b97867d84f49d9ef00a = L.circle(
+                [43.401395,-87.97627],
+                103795.938707,
+                {
+                    color: 'black',
+                    fillColor: 'yellow',
+                    fillOpacity: 0.6
+                    }
+                )
+                .addTo(map_a19afbce7d1b41749d905d88e73fe4f8);
+            
+        
+            
+            var popup_57ada0a87abf41b4ad4fe39447e26d00 = L.popup({maxWidth: '300'});
+
+            
+                var html_376f28c00c4f406189119d5ceadc8d40 = $('         <div id="html_376f28c00c4f406189119d5ceadc8d40"                 style="width: 100.0%; height: 100.0%;">                 Milwaukee has an attendance score of 1.03 and loyalty score of 1.92</div>                 ')[0];
+                popup_57ada0a87abf41b4ad4fe39447e26d00.setContent(html_376f28c00c4f406189119d5ceadc8d40);
+            
+
+            circle_marker_53da086a61dd4b97867d84f49d9ef00a.bindPopup(popup_57ada0a87abf41b4ad4fe39447e26d00);
+
+            
+        
+        
+            
+
+            var circle_marker_32bec4782a1647f49bf94040a9ed97e0 = L.circle(
+                [39.902536,-75.169146],
+                103443.780187,
+                {
+                    color: 'black',
+                    fillColor: 'yellow',
+                    fillOpacity: 0.6
+                    }
+                )
+                .addTo(map_a19afbce7d1b41749d905d88e73fe4f8);
+            
+        
+            
+            var popup_9adf6cc7af0a491a85da33a8cbf50877 = L.popup({maxWidth: '300'});
+
+            
+                var html_30d5210c0a47484aa1d60dd8a44e327f = $('         <div id="html_30d5210c0a47484aa1d60dd8a44e327f"                 style="width: 100.0%; height: 100.0%;">                 Philadelphia has an attendance score of 1.03 and loyalty score of 1.92</div>                 ')[0];
+                popup_9adf6cc7af0a491a85da33a8cbf50877.setContent(html_30d5210c0a47484aa1d60dd8a44e327f);
+            
+
+            circle_marker_32bec4782a1647f49bf94040a9ed97e0.bindPopup(popup_9adf6cc7af0a491a85da33a8cbf50877);
+
+            
+        
+        
+            
+
+            var circle_marker_472056294ecc44b4a7969462e91ec51b = L.circle(
+                [42.304522,-71.114498],
+                169466.651744,
+                {
+                    color: 'black',
+                    fillColor: 'yellow',
+                    fillOpacity: 0.6
+                    }
+                )
+                .addTo(map_a19afbce7d1b41749d905d88e73fe4f8);
+            
+        
+            
+            var popup_6e6195ccf0bd4e75aa7050d375cd4d1c = L.popup({maxWidth: '300'});
+
+            
+                var html_8588a491c0294179a36e8860a3c8f937 = $('         <div id="html_8588a491c0294179a36e8860a3c8f937"                 style="width: 100.0%; height: 100.0%;">                 Boston has an attendance score of 1.18 and loyalty score of 1.94</div>                 ')[0];
+                popup_6e6195ccf0bd4e75aa7050d375cd4d1c.setContent(html_8588a491c0294179a36e8860a3c8f937);
+            
+
+            circle_marker_472056294ecc44b4a7969462e91ec51b.bindPopup(popup_6e6195ccf0bd4e75aa7050d375cd4d1c);
+
+            
+        
+        
+            
+
+            var circle_marker_c04bbdad06b64d239144061d771f7917 = L.circle(
+                [45.5314,-122.667],
+                110682.908959,
+                {
+                    color: 'black',
+                    fillColor: 'yellow',
+                    fillOpacity: 0.6
+                    }
+                )
+                .addTo(map_a19afbce7d1b41749d905d88e73fe4f8);
+            
+        
+            
+            var popup_1203818868654838a1077008ad37283b = L.popup({maxWidth: '300'});
+
+            
+                var html_89237faec3464bc5861614b6d14b434c = $('         <div id="html_89237faec3464bc5861614b6d14b434c"                 style="width: 100.0%; height: 100.0%;">                 Portland has an attendance score of 1.05 and loyalty score of 1.94</div>                 ')[0];
+                popup_1203818868654838a1077008ad37283b.setContent(html_89237faec3464bc5861614b6d14b434c);
+            
+
+            circle_marker_c04bbdad06b64d239144061d771f7917.bindPopup(popup_1203818868654838a1077008ad37283b);
+
+            
+        
+        
+            
+
+            var circle_marker_822624131f4249d6adae6fdde47095ab = L.circle(
+                [37.6965306667,-122.228853333],
+                113305.04235,
+                {
+                    color: 'black',
+                    fillColor: 'yellow',
+                    fillOpacity: 0.6
+                    }
+                )
+                .addTo(map_a19afbce7d1b41749d905d88e73fe4f8);
+            
+        
+            
+            var popup_c55d565b21d74625ab3e460b2a5b8117 = L.popup({maxWidth: '300'});
+
+            
+                var html_b7b5b61517ab4b0ba7888cbde393acc5 = $('         <div id="html_b7b5b61517ab4b0ba7888cbde393acc5"                 style="width: 100.0%; height: 100.0%;">                 Bay Area has an attendance score of 1.05 and loyalty score of 1.96</div>                 ')[0];
+                popup_c55d565b21d74625ab3e460b2a5b8117.setContent(html_b7b5b61517ab4b0ba7888cbde393acc5);
+            
+
+            circle_marker_822624131f4249d6adae6fdde47095ab.bindPopup(popup_c55d565b21d74625ab3e460b2a5b8117);
+
+            
+        
+        
+            
+
+            var circle_marker_7a3be5a4e81b499b823139989b975c1f = L.circle(
+                [40.7683,-111.901],
+                116520.551993,
+                {
+                    color: 'black',
+                    fillColor: 'yellow',
+                    fillOpacity: 0.6
+                    }
+                )
+                .addTo(map_a19afbce7d1b41749d905d88e73fe4f8);
+            
+        
+            
+            var popup_06f2a66505c14fcba7c26989e1154796 = L.popup({maxWidth: '300'});
+
+            
+                var html_b28f72a6196f4866bb130cdc6c6eefd1 = $('         <div id="html_b28f72a6196f4866bb130cdc6c6eefd1"                 style="width: 100.0%; height: 100.0%;">                 Salt Lake City has an attendance score of 1.06 and loyalty score of 1.96</div>                 ')[0];
+                popup_06f2a66505c14fcba7c26989e1154796.setContent(html_b28f72a6196f4866bb130cdc6c6eefd1);
+            
+
+            circle_marker_7a3be5a4e81b499b823139989b975c1f.bindPopup(popup_06f2a66505c14fcba7c26989e1154796);
+
+            
+        
+        
+            
+
+            var circle_marker_7025137139ed48fc8ebb1d0994f1bf80 = L.circle(
+                [44.97206875,-93.2370666667],
+                82440.3949012,
+                {
+                    color: 'black',
+                    fillColor: 'yellow',
+                    fillOpacity: 0.6
+                    }
+                )
+                .addTo(map_a19afbce7d1b41749d905d88e73fe4f8);
+            
+        
+            
+            var popup_d43cc31f2d6641918d241441a921dd7a = L.popup({maxWidth: '300'});
+
+            
+                var html_3ab3361bf57345b1a2773306c1922681 = $('         <div id="html_3ab3361bf57345b1a2773306c1922681"                 style="width: 100.0%; height: 100.0%;">                 Minneapolis has an attendance score of 0.98 and loyalty score of 1.97</div>                 ')[0];
+                popup_d43cc31f2d6641918d241441a921dd7a.setContent(html_3ab3361bf57345b1a2773306c1922681);
+            
+
+            circle_marker_7025137139ed48fc8ebb1d0994f1bf80.bindPopup(popup_d43cc31f2d6641918d241441a921dd7a);
+
+            
+        
+        
+            
+
+            var circle_marker_d635a2d40e3f4c209f697e1e6256a0d2 = L.circle(
+                [41.882080597,-87.6506283582],
+                133033.642453,
+                {
+                    color: 'black',
+                    fillColor: 'yellow',
+                    fillOpacity: 0.6
+                    }
+                )
+                .addTo(map_a19afbce7d1b41749d905d88e73fe4f8);
+            
+        
+            
+            var popup_4d9e1a9cd62548628d4eb36ba7593762 = L.popup({maxWidth: '300'});
+
+            
+                var html_ad1374afcd254fdcaff2dcac78562795 = $('         <div id="html_ad1374afcd254fdcaff2dcac78562795"                 style="width: 100.0%; height: 100.0%;">                 Chicago has an attendance score of 1.1 and loyalty score of 1.99</div>                 ')[0];
+                popup_4d9e1a9cd62548628d4eb36ba7593762.setContent(html_ad1374afcd254fdcaff2dcac78562795);
+            
+
+            circle_marker_d635a2d40e3f4c209f697e1e6256a0d2.bindPopup(popup_4d9e1a9cd62548628d4eb36ba7593762);
+
+            
+        
+        
+            
+
+            var circle_marker_dce3e9420bc94cb8b683823886b83726 = L.circle(
+                [41.4988125,-81.6897425],
+                45557.5301997,
+                {
+                    color: 'black',
+                    fillColor: 'yellow',
+                    fillOpacity: 0.6
+                    }
+                )
+                .addTo(map_a19afbce7d1b41749d905d88e73fe4f8);
+            
+        
+            
+            var popup_1e343dcfadbf491598baaa8071e2d760 = L.popup({maxWidth: '300'});
+
+            
+                var html_711f27e197824e69a3079febb7fbcf52 = $('         <div id="html_711f27e197824e69a3079febb7fbcf52"                 style="width: 100.0%; height: 100.0%;">                 Cleveland has an attendance score of 0.9 and loyalty score of 2.0</div>                 ')[0];
+                popup_1e343dcfadbf491598baaa8071e2d760.setContent(html_711f27e197824e69a3079febb7fbcf52);
+            
+
+            circle_marker_dce3e9420bc94cb8b683823886b83726.bindPopup(popup_1e343dcfadbf491598baaa8071e2d760);
+
+            
+        
+        
+            
+
+            var circle_marker_d0ce65f2584f4b689f40773e90450b50 = L.circle(
+                [29.7362052632,-95.3717315789],
+                121320.588992,
+                {
+                    color: 'black',
+                    fillColor: 'yellow',
+                    fillOpacity: 0.6
+                    }
+                )
+                .addTo(map_a19afbce7d1b41749d905d88e73fe4f8);
+            
+        
+            
+            var popup_96c0412da2064774a5ef9dc5502fed36 = L.popup({maxWidth: '300'});
+
+            
+                var html_6c8df0a515894225bcfe0e17450f96a8 = $('         <div id="html_6c8df0a515894225bcfe0e17450f96a8"                 style="width: 100.0%; height: 100.0%;">                 Houston has an attendance score of 1.07 and loyalty score of 2.01</div>                 ')[0];
+                popup_96c0412da2064774a5ef9dc5502fed36.setContent(html_6c8df0a515894225bcfe0e17450f96a8);
+            
+
+            circle_marker_d0ce65f2584f4b689f40773e90450b50.bindPopup(popup_96c0412da2064774a5ef9dc5502fed36);
+
+            
+        
+        
+            
+
+            var circle_marker_15c804691ddf44d8a3c93ba75af6c736 = L.circle(
+                [36.16285,-86.77495],
+                94355.5327253,
+                {
+                    color: 'black',
+                    fillColor: 'yellow',
+                    fillOpacity: 0.6
+                    }
+                )
+                .addTo(map_a19afbce7d1b41749d905d88e73fe4f8);
+            
+        
+            
+            var popup_ca12e2acaa734b36a18dac6436b6b73d = L.popup({maxWidth: '300'});
+
+            
+                var html_7bec02377201479482dcd0a19efb7f6f = $('         <div id="html_7bec02377201479482dcd0a19efb7f6f"                 style="width: 100.0%; height: 100.0%;">                 Nashville has an attendance score of 1.01 and loyalty score of 2.02</div>                 ')[0];
+                popup_ca12e2acaa734b36a18dac6436b6b73d.setContent(html_7bec02377201479482dcd0a19efb7f6f);
+            
+
+            circle_marker_15c804691ddf44d8a3c93ba75af6c736.bindPopup(popup_ca12e2acaa734b36a18dac6436b6b73d);
+
+            
+        
+        
+            
+
+            var circle_marker_18a34db717b14a568e9308ac9d7b5423 = L.circle(
+                [38.8916833333,-76.9726194444],
+                71010.5610436,
+                {
+                    color: 'black',
+                    fillColor: 'yellow',
+                    fillOpacity: 0.6
+                    }
+                )
+                .addTo(map_a19afbce7d1b41749d905d88e73fe4f8);
+            
+        
+            
+            var popup_3fc644d0751546aabf2a7c81e7528695 = L.popup({maxWidth: '300'});
+
+            
+                var html_d198c60312dd421287cba72f1996dba4 = $('         <div id="html_d198c60312dd421287cba72f1996dba4"                 style="width: 100.0%; height: 100.0%;">                 Washington D.C. has an attendance score of 0.96 and loyalty score of 2.02</div>                 ')[0];
+                popup_3fc644d0751546aabf2a7c81e7528695.setContent(html_d198c60312dd421287cba72f1996dba4);
+            
+
+            circle_marker_18a34db717b14a568e9308ac9d7b5423.bindPopup(popup_3fc644d0751546aabf2a7c81e7528695);
+
+            
+        
+        
+            
+
+            var circle_marker_bde3ac96f2684324a836ecec61c075ae = L.circle(
+                [39.0502851852,-94.4821740741],
+                55077.5424973,
+                {
+                    color: 'black',
+                    fillColor: 'green',
+                    fillOpacity: 0.6
+                    }
+                )
+                .addTo(map_a19afbce7d1b41749d905d88e73fe4f8);
+            
+        
+            
+            var popup_b2560d7763034b28ad15b201895912c1 = L.popup({maxWidth: '300'});
+
+            
+                var html_5b374d8ff5b347479cfcfdb258adf9d1 = $('         <div id="html_5b374d8ff5b347479cfcfdb258adf9d1"                 style="width: 100.0%; height: 100.0%;">                 Kansas City has an attendance score of 0.92 and loyalty score of 2.08</div>                 ')[0];
+                popup_b2560d7763034b28ad15b201895912c1.setContent(html_5b374d8ff5b347479cfcfdb258adf9d1);
+            
+
+            circle_marker_bde3ac96f2684324a836ecec61c075ae.bindPopup(popup_b2560d7763034b28ad15b201895912c1);
+
+            
+        
+        
+            
+
+            var circle_marker_92fbc60364cd4ba4ae0688f829c31b45 = L.circle(
+                [42.81422,-78.82276],
+                95892.0990207,
+                {
+                    color: 'black',
+                    fillColor: 'green',
+                    fillOpacity: 0.6
+                    }
+                )
+                .addTo(map_a19afbce7d1b41749d905d88e73fe4f8);
+            
+        
+            
+            var popup_eddcc41bde6640398fa12a687ec3637d = L.popup({maxWidth: '300'});
+
+            
+                var html_bfeaaa43ed974eb0880db32fe8a13a28 = $('         <div id="html_bfeaaa43ed974eb0880db32fe8a13a28"                 style="width: 100.0%; height: 100.0%;">                 Buffalo has an attendance score of 1.01 and loyalty score of 2.11</div>                 ')[0];
+                popup_eddcc41bde6640398fa12a687ec3637d.setContent(html_bfeaaa43ed974eb0880db32fe8a13a28);
+            
+
+            circle_marker_92fbc60364cd4ba4ae0688f829c31b45.bindPopup(popup_eddcc41bde6640398fa12a687ec3637d);
+
+            
+        
+        
+            
+
+            var circle_marker_7fe4c80b6eac4b8aaba20377c60f8029 = L.circle(
+                [38.6491,-121.518],
+                85707.3916818,
+                {
+                    color: 'black',
+                    fillColor: 'green',
+                    fillOpacity: 0.6
+                    }
+                )
+                .addTo(map_a19afbce7d1b41749d905d88e73fe4f8);
+            
+        
+            
+            var popup_9aad75c5868b443b9db3179bfb62740f = L.popup({maxWidth: '300'});
+
+            
+                var html_d593d23dae274599955c62419bffaa2d = $('         <div id="html_d593d23dae274599955c62419bffaa2d"                 style="width: 100.0%; height: 100.0%;">                 Sacramento has an attendance score of 0.99 and loyalty score of 2.14</div>                 ')[0];
+                popup_9aad75c5868b443b9db3179bfb62740f.setContent(html_d593d23dae274599955c62419bffaa2d);
+            
+
+            circle_marker_7fe4c80b6eac4b8aaba20377c60f8029.bindPopup(popup_9aad75c5868b443b9db3179bfb62740f);
+
+            
+        
+        
+            
+
+            var circle_marker_e66732951db04b268bb385624afa904e = L.circle(
+                [53.5714,-113.456],
+                115511.508254,
+                {
+                    color: 'black',
+                    fillColor: 'green',
+                    fillOpacity: 0.6
+                    }
+                )
+                .addTo(map_a19afbce7d1b41749d905d88e73fe4f8);
+            
+        
+            
+            var popup_1f3f72fd97d343a5a6ad2583706c6a48 = L.popup({maxWidth: '300'});
+
+            
+                var html_3b08c329e66748318191d32178b18ce1 = $('         <div id="html_3b08c329e66748318191d32178b18ce1"                 style="width: 100.0%; height: 100.0%;">                 Edmonton has an attendance score of 1.06 and loyalty score of 2.18</div>                 ')[0];
+                popup_1f3f72fd97d343a5a6ad2583706c6a48.setContent(html_3b08c329e66748318191d32178b18ce1);
+            
+
+            circle_marker_e66732951db04b268bb385624afa904e.bindPopup(popup_1f3f72fd97d343a5a6ad2583706c6a48);
+
+            
+        
+        
+            
+
+            var circle_marker_4d8b2336861f43848efe68c90da963de = L.circle(
+                [28.5392,-81.3836],
+                100480.568364,
+                {
+                    color: 'black',
+                    fillColor: 'blue',
+                    fillOpacity: 0.6
+                    }
+                )
+                .addTo(map_a19afbce7d1b41749d905d88e73fe4f8);
+            
+        
+            
+            var popup_783a147966644174b10282d628023602 = L.popup({maxWidth: '300'});
+
+            
+                var html_4cd1b7b85840424fb0204b944a06a1f5 = $('         <div id="html_4cd1b7b85840424fb0204b944a06a1f5"                 style="width: 100.0%; height: 100.0%;">                 Orlando has an attendance score of 1.02 and loyalty score of 2.23</div>                 ')[0];
+                popup_783a147966644174b10282d628023602.setContent(html_4cd1b7b85840424fb0204b944a06a1f5);
+            
+
+            circle_marker_4d8b2336861f43848efe68c90da963de.bindPopup(popup_783a147966644174b10282d628023602);
+
+            
+        
+        
+            
+
+            var circle_marker_f02d1c31dbe1415ca683fa7e27f206bd = L.circle(
+                [42.429622,-83.100126],
+                97037.2054186,
+                {
+                    color: 'black',
+                    fillColor: 'blue',
+                    fillOpacity: 0.6
+                    }
+                )
+                .addTo(map_a19afbce7d1b41749d905d88e73fe4f8);
+            
+        
+            
+            var popup_462a0440bf374cc6a35dd8e8ad1f5c55 = L.popup({maxWidth: '300'});
+
+            
+                var html_fba6a1b06d7f43a9a63b864f655a0753 = $('         <div id="html_fba6a1b06d7f43a9a63b864f655a0753"                 style="width: 100.0%; height: 100.0%;">                 Detroit has an attendance score of 1.02 and loyalty score of 2.29</div>                 ')[0];
+                popup_462a0440bf374cc6a35dd8e8ad1f5c55.setContent(html_fba6a1b06d7f43a9a63b864f655a0753);
+            
+
+            circle_marker_f02d1c31dbe1415ca683fa7e27f206bd.bindPopup(popup_462a0440bf374cc6a35dd8e8ad1f5c55);
+
+            
+        
+        
+            
+
+            var circle_marker_4bf02adf87b441f5b9578ed31b3515d3 = L.circle(
+                [35.2251842105,-80.8472631579],
+                68644.2801958,
+                {
+                    color: 'black',
+                    fillColor: 'blue',
+                    fillOpacity: 0.6
+                    }
+                )
+                .addTo(map_a19afbce7d1b41749d905d88e73fe4f8);
+            
+        
+            
+            var popup_c5e9b0c006874caf853043f06efa50dc = L.popup({maxWidth: '300'});
+
+            
+                var html_37dacdf858d14819afdf86dca2e2297a = $('         <div id="html_37dacdf858d14819afdf86dca2e2297a"                 style="width: 100.0%; height: 100.0%;">                 Charlotte has an attendance score of 0.95 and loyalty score of 2.3</div>                 ')[0];
+                popup_c5e9b0c006874caf853043f06efa50dc.setContent(html_37dacdf858d14819afdf86dca2e2297a);
+            
+
+            circle_marker_4bf02adf87b441f5b9578ed31b3515d3.bindPopup(popup_c5e9b0c006874caf853043f06efa50dc);
+
+            
+        
+        
+            
+
+            var circle_marker_32159eca53144f6f81762166682b1d37 = L.circle(
+                [38.6247444444,-90.1986777778],
+                136173.970089,
+                {
+                    color: 'black',
+                    fillColor: 'purple',
+                    fillOpacity: 0.6
+                    }
+                )
+                .addTo(map_a19afbce7d1b41749d905d88e73fe4f8);
+            
+        
+            
+            var popup_8b6517cee28e4541b6605eb3cc62bb0a = L.popup({maxWidth: '300'});
+
+            
+                var html_82047dfa97c145b6b35c0bb38b3ea7f6 = $('         <div id="html_82047dfa97c145b6b35c0bb38b3ea7f6"                 style="width: 100.0%; height: 100.0%;">                 St. Louis has an attendance score of 1.1 and loyalty score of 2.42</div>                 ')[0];
+                popup_8b6517cee28e4541b6605eb3cc62bb0a.setContent(html_82047dfa97c145b6b35c0bb38b3ea7f6);
+            
+
+            circle_marker_32159eca53144f6f81762166682b1d37.bindPopup(popup_8b6517cee28e4541b6605eb3cc62bb0a);
+
+            
+        
+        
+            
+
+            var circle_marker_75f13a0992534590919f3db4898978be = L.circle(
+                [30.3239,-81.6374],
+                70117.8810575,
+                {
+                    color: 'black',
+                    fillColor: 'black',
+                    fillOpacity: 0.6
+                    }
+                )
+                .addTo(map_a19afbce7d1b41749d905d88e73fe4f8);
+            
+        
+            
+            var popup_6e555e4d13934e2c9233ac39aa654ce1 = L.popup({maxWidth: '300'});
+
+            
+                var html_06b017f7c4f04ac29d8666120bb121df = $('         <div id="html_06b017f7c4f04ac29d8666120bb121df"                 style="width: 100.0%; height: 100.0%;">                 Jacksonville has an attendance score of 0.96 and loyalty score of 2.75</div>                 ')[0];
+                popup_6e555e4d13934e2c9233ac39aa654ce1.setContent(html_06b017f7c4f04ac29d8666120bb121df);
+            
+
+            circle_marker_75f13a0992534590919f3db4898978be.bindPopup(popup_6e555e4d13934e2c9233ac39aa654ce1);
+
+            
+        
+        
+        
+        </script>
+        

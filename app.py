@@ -29,4 +29,4 @@ def stockgraph():
     return render_template('stockgraph.html', script=thescript, div=thediv)
 
 if __name__ == "__main__":
-    app.run(host='159.89.38.228')
+    app.run(host='0.0.0.0')
