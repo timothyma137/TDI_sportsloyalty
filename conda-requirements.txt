@@ -1,4 +1,4 @@
-
+scipy
 flask
 jinja2
 pip
