@@ -1,6 +1,5 @@
-from flask import Flask,render_template,request,redirect,session, jsonify, json
+from flask import Flask,render_template,request,redirect,session, json
 
-import re
 import requests as rq
 import pandas as pd
 import numpy as np
@@ -10,9 +9,6 @@ from sklearn.tree import DecisionTreeRegressor
 from sklearn.base import TransformerMixin
 from sklearn.pipeline import make_pipeline
 from sklearn.feature_extraction import DictVectorizer
-import logging
-logging.basicConfig(filename='example.log',level=logging.DEBUG)
-
 
 app = Flask(__name__)
 
