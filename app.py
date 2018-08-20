@@ -2,7 +2,6 @@ from flask import Flask,render_template,request,redirect,session, jsonify, json
 
 import re
 import requests as rq
-import simplejson as json
 import pandas as pd
 import numpy as np
 from sklearn.pipeline import Pipeline
@@ -11,12 +10,9 @@ from sklearn.tree import DecisionTreeRegressor
 from sklearn.base import TransformerMixin
 from sklearn.pipeline import make_pipeline
 from sklearn.feature_extraction import DictVectorizer
-
 import logging
 logging.basicConfig(filename='example.log',level=logging.DEBUG)
-logging.debug('This message should go to the log file')
-logging.info('So should this')
-logging.warning('And this, too')
+
 
 app = Flask(__name__)
 
