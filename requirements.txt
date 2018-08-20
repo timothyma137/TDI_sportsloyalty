@@ -9,7 +9,7 @@ simplejson==3.8.0
 scipy>=0.15.1
 scikit-learn==0.19.2
 pip
-pandas==0.18.1
+pandas==0.23.4
 httpbin
 
 numpy==1.12.0

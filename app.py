@@ -30,7 +30,7 @@ def index():
 
 @app.route('/basicadd', methods=['GET','POST'])
 def basicadd():
-    rawsportsdata = pd.read_excel('exceldata.xlsx')
+    rawsportsdata = pd.read_pickle('dataframeform.pkl')
     rsd = rawsportsdata
 
     for i in range(2001, 2018):
@@ -137,4 +137,4 @@ def basicadd():
     return render_template('index.html', attendancenumber = theanswer, ci=app.vars['cityinput'], si=app.vars['sportinput'], wi=app.vars['wininput'])
 
 if __name__ == "__main__":
-    app.run(host='0.0.0.0')
+    app.run(host='0.0.0.0', debug=True)
