@@ -1,6 +1,4 @@
-scipy
-bitarray
-reportlab
+
 flask
 jinja2
 pip
