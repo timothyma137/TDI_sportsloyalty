@@ -5,7 +5,7 @@ import pandas as pd
 import numpy as np
 from sklearn.pipeline import Pipeline
 from numpy import NaN
-from sklearn.tree import DecisionTreeRegressor
+from sklearn.ensemble import RandomForestRegressor
 from sklearn.base import TransformerMixin
 from sklearn.pipeline import make_pipeline
 from sklearn.feature_extraction import DictVectorizer
@@ -66,75 +66,23 @@ def basicadd():
     copper_pipeline = Pipeline([
         ('row_it', RowIterator()), 
         ('dict_vect', DictVectorizer(sparse=False)),
-        ('dec_tree', DecisionTreeRegressor(random_state=7))
+        ('forest_regressor', RandomForestRegressor(random_state=11, n_estimators=200, max_depth=None, 
+                                  min_samples_leaf=1, min_samples_split=2, bootstrap=False))
 
     ])
     themodel = copper_pipeline.fit(sorteddata[[2, 5, 8]], sorteddata[[10]] )
     
     app.vars['cityinput'] = request.args.get('cityinput')
     app.vars['sportinput'] = request.args.get('sportinput')
-    app.vars['wininput'] = request.args.get('wininput')
+    app.vars['wininput'] = float(request.args.get('wininput'))
     
     exampledata2=pd.DataFrame([['Anaheim Ducks', 2010, str(app.vars['cityinput']), 100, 'Supersonics', str(app.vars['sportinput']), 33,33, float(app.vars['wininput']), 80]])
 
     theanswer= round(themodel.predict(exampledata2)[0], 1)
-    
-    if app.vars['cityinput'] not in [u'Atlanta',
- u'Baltimore',
- u'Bay Area',
- u'Boston',
- u'Buffalo',
- u'Calgary',
- u'Charlotte',
- u'Chicago',
- u'Cincinnati',
- u'Cleveland',
- u'Columbus',
- u'Dallas',
- u'Denver',
- u'Detroit',
- u'Edmonton',
- u'Houston',
- u'Indianapolis',
- u'Jacksonville',
- u'Kansas City',
- u'Los Angeles',
- u'Memphis',
- u'Miami',
- u'Milwaukee',
- u'Minneapolis',
- u'Montreal',
- u'Nashville',
- u'New Orleans',
- u'New York',
- u'Oklahoma City',
- u'Orlando',
- u'Ottawa',
- u'Philadelphia',
- u'Phoenix',
- u'Pittsburg',
- u'Portland',
- u'Raleigh-Durham',
- u'Sacramento',
- u'Salt Lake City',
- u'San Antonio',
- u'San Diego',
- u'Seattle',
- u'St. Louis',
- u'Tampa Bay',
- u'Toronto',
- u'Vancouver',
- u'Washington D.C.',
- u'Winnipeg']:
-        theanswer= "pick a valid city"
-    if app.vars['sportinput'] not in [u'NFL',u'NBA',u'MLB',u'NHL']:
-        theanswer= "pick a valid sports league"
-    if float(app.vars['wininput'])<0 or float(app.vars['wininput'])>1:
-        theanswer= "pick a valid win percentage"
 
     
     
-    return render_template('index.html', attendancenumber = theanswer, ci=app.vars['cityinput'], si=app.vars['sportinput'], wi=app.vars['wininput'])
+    return render_template('index.html', attendancenumber = theanswer, ci=app.vars['cityinput'], si=app.vars['sportinput'], wi=app.vars['wininput']*100)
 
 if __name__ == "__main__":
     app.run(host='0.0.0.0', debug=True)

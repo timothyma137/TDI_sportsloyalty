@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <!-- Theme Made By www.w3schools.com - No Copyright -->
-  <title>Bootstrap Theme Simply Me</title>
+  <title>Sports Loyalty and other Fan Insights</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
@@ -71,6 +71,119 @@
   <h3>The North American sports industry pulls in tens of billions of dollars every year. By understanding fan behaviors for different teams, different sports, and different sports markets around the U.S., owners will be able to gauge the monetary pros and cons of moving a franchise across the country. Companies will better evaluate the value in sponsorships and advertisements. The presidents and managers of these teams will be able to predict whether improving their roster actually leads to profit. We also get to see which sports and which cities are most loyal to their teams.</h3>
 </div>
 
+
+<!-- Sixth Container -->   
+<div class="container-fluid bg-3 text-left">
+  <a name="anchoraway"></a> 
+  <h2 class="margin">Make Your Own Team!</h2>
+  <form id='input' action="{{ url_for('basicadd') }}#anchoraway" >
+      <h3>Pick a City</h3>
+        <select name= "cityinput">
+	  <option value="Atlanda">Atlanta</option>
+	  <option value="Baltimore">Baltimore</option>
+	  <option value="Bay Area">Bay Area</option>
+	  <option value="Boston">Boston</option>
+	  <option value="Buffalo">Buffalo</option>
+	  <option value="Calgary">Calgary</option>
+	  <option value="Charlotte">Charlotte</option>
+	  <option value="Chicago">Chicago</option>
+	  <option value="Cincinnati">Cincinnati</option>
+	  <option value="Cleveland">Cleveland</option>
+	  <option value="Columbus">Columbus</option>
+	  <option value="Dallas">Dallas</option>
+	  <option value="Denver">Denver</option>
+	  <option value="Detroit">Detroit</option>
+	  <option value="Edmonton">Edmonton</option>
+	  <option value="Houston">Houston</option>
+	  <option value="Indianapolis">Indianapolis</option>
+	  <option value="Jacksonville">Jacksonville</option>
+	  <option value="Kansas City">Kansas City</option>
+	  <option value="Los Angeles">Los Angeles</option>
+	  <option value="Memphis">Memphis</option>
+	  <option value="Miami">Miami</option>
+	  <option value="Milwaukee">Milwaukee</option>
+	  <option value="Minneapolis">Minneapolis</option>
+	  <option value="Montreal">Montreal</option>
+	  <option value="Nashville">Nashville</option>
+	  <option value="New Orleans">New Orleans</option>
+	  <option value="New York">New York</option>
+	  <option value="Oklahoma City">Oklahoma City</option>
+	  <option value="Orlando">Orlando</option>
+	  <option value="Ottawa">Ottawa</option>
+	  <option value="Philadelphia">Philadelphia</option>
+	  <option value="Phoenix">Phoenix</option>
+	  <option value="Pittsburg">Pittsburg</option>
+	  <option value="Portland">Portland</option>
+	  <option value="Raleigh-Durham">Raleigh-Durham</option>
+	  <option value="Sacramento">Sacramento</option>
+	  <option value="Salt Lake City">Salt Lake City</option>
+	  <option value="San Antonio">San Antonio</option>
+	  <option value="San Diego">San Diego</option>
+	  <option value="Seattle">Seattle</option>
+	  <option value="St. Louis">St. Louis</option>
+	  <option value="Tampa Bay">Tampa Bay</option>
+	  <option value="Toronto">Toronto</option>
+	  <option value="Vancouver">Vancouver</option>
+	  <option value="Washington D.C.">Washington D.C.</option>
+	  <option value="Winnipeg">Winnipeg</option>    
+	</select>
+	
+        
+	<h3>Pick a Sport League</h3>
+	<select name = "sportinput">
+	  <option value="NFL">NFL</option>
+	  <option value="NBA">NBA</option>
+	  <option value="NHL">NHL</option>
+	  <option value="MLB">MLB</option>
+	</select>
+	
+	<h3>Pick a Regular Season Win Percentage</h3>
+	<select name = "wininput">
+	  <option value = "0."> No Wins</option>
+	  <option value= ".05"> 5%</option>
+	  <option value= ".10">10%</option>
+	  <option value= ".15">15%</option>
+	  <option value= ".20">20%</option>
+	  <option value= ".25">25%</option>
+	  <option value= ".30">30%</option>
+	  <option value= ".35">35%</option>
+	  <option value= ".40">40%</option>
+	  <option value= ".45">45%</option>
+	  <option value= ".50">50%</option>
+	  <option value= ".55">55%</option>
+	  <option value= ".60">60%</option>
+	  <option value= ".65">65%</option>
+	  <option value= ".70">70%</option>
+	  <option value= ".75">75%</option>
+	  <option value= ".80">80%</option>
+	  <option value= ".85">85%</option>
+	  <option value= ".90">90%</option>
+	  <option value= ".95">95%</option>	    
+	  <option value= "1.0"> Perfect Season</option> 
+	</select>
+
+            <p>
+                City: {{ ci }}<br />
+                Sport: {{ si }}<br />
+                Win Percentage: {{ wi}} %<br />
+                Esimated Attendance: {{ attendancenumber }}%<br />
+
+	</p>
+	
+	
+	<p>
+	
+	 
+	<input type="submit" value="Display Result">
+	
+	</p>
+
+	</form>
+
+   
+	
+</div> 
+
 <!-- Second Container -->
 <div class="container-fluid bg-2 text-center">
   <h2 class="margin">The Data</h2>
@@ -100,7 +213,9 @@ When looking at the totality of all sports, it appears that higher ticket prices
 <div class="container-fluid bg-2 text-center">
   <h2 class="margin">Loyalty by City</h2>
     
-<iframe src={{ url_for('static', filename='images/withcanadamap.html')}} width="900" height="500"></iframe>
+<iframe src={{ url_for('static', filename='images/nov12map.html')}}
+  width="900" height="500"></iframe>
+  <img  src={{ url_for('static', filename='images/colorscale.png')}} class="img-responsive img-rectangle margin" style="display:inline" alt="Bird" width="700" height="200">
     
   <h3>Click around on this interactive map. The size of the circle dictates high average attendance for a sport for a year against its league average. The color of the circle dictates fan loyalty given by attendance/ win percentage starting with white as the lowest loyalty, then pink, red, orange, yellow, green, blue, purple, to black as the highest loyalty. This places a high value on fans who go to games despite losing seasons. <br />
       <br />
@@ -119,107 +234,15 @@ Raleigh-Durham with their Carolina Hurricanes hockey team has the worst loyalty,
   <h3>Each team and each year account for a single data point. When a team moves, those teams are then considered as the end of one team and the start of a new. Teams that have simply changed their name are considered the same team. If a team for a certain year is missing its attendance figures or ticket figures, that data point is thrown out. With 128 teams in the four sports and 17 years of records, I reduced the data down to city, sport, attendance for a year, ticket price for a year, and win percentage for a year. <br />
       <br />
 
-My pipeline consists of a row iterator, a dictionary vectorizer, followed by a decision tree regressor. The resulting model predicts that with outrageously high ticket prices, attendance will skyrocket, so that variable was removed. The new resulting model gives an R^2 score of 0.95. The model predicts the attendance of a sport in a city at a certain win percentage. We can create new teams such as a basketball team returning to Seattle or a football team in Orlando. </h3>
+My pipeline consists of a row iterator, a dictionary vectorizer,
+  followed by a random forest regressor. The resulting model predicts
+  that with outrageously high ticket prices, attendance will
+  skyrocket, so that variable was removed. Cross Validation scores the
+  model to have an R^2 of 0.7. The model predicts the attendance of a sport in a city at a certain win percentage. We can create new teams such as a basketball team returning to Seattle or a football team in Orlando. </h3>
 </div>    
     
-<!-- Sixth Container -->   
-<div class="container-fluid bg-3 text-left">
-    <h2 class="margin">Make Your Own Team!</h2>
-        <div class="row">
-    <div class="column">
-        <h3>Pick a City</h3>
-        <ul>
-          <li>Atlanta</li>
-          <li>Baltimore</li>
-          <li>Bay Area</li>
-          <li>Boston</li>
-          <li>Buffalo</li>
-          <li>Calgary</li>
-          <li>Charlotte</li>
-          <li>Chicago</li>
-          <li>Cincinnati</li>
-          <li>Cleveland</li>
-          <li>Columbus</li>
-          <li>Dallas</li>
-          <li>Denver</li>
-          <li>Detroit</li>
-          <li>Edmonton</li>
-          <li>Houston</li>
-          <li>Indianapolis</li>
-          <li>Jacksonville</li>
-          <li>Kansas City</li>
-          <li>Los Angeles</li>
-          <li>Memphis</li>
-          <li>Miami</li>
-          <li>Milwaukee</li>
-          <li>Minneapolis</li>
-          <li>Montreal</li>
-          <li>Nashville</li>
-          <li>New Orleans</li>
-          <li>New York</li>
-          <li>Oklahoma City</li>
-          <li>Orlando</li>
-          <li>Ottawa</li>
-          <li>Philadelphia</li>
-          <li>Phoenix</li>
-          <li>Pittsburg</li>
-          <li>Portland</li>
-          <li>Raleigh-Durham</li>
-          <li>Sacramento</li>
-          <li>Salt Lake City</li>
-          <li>San Antonio</li>
-          <li>San Diego</li>
-          <li>Seattle</li>
-          <li>St. Louis</li>
-          <li>Tampa Bay</li>
-          <li>Toronto</li>
-          <li>Vancouver</li>
-          <li>Washington D.C.</li>
-          <li>Winnipeg</li>
-
-        </ul> 
-        
-        <h3>Pick a Sport League</h3>
-        <ul>
-          <li>NFL</li>
-          <li>NBA</li>
-          <li>MLB</li>
-          <li>NHL</li>
-        </ul> 
-        <h3>Pick a Win Fraction between 0 and 1</h3>
-    </div>
-    <div class="column">
-        <form id='input' action="{{ url_for('basicadd') }}" >
-
-            <p>
-                City: <input type='text' name='cityinput' />  
-            </p>
-
-            <p>
-                Sport: <input type='text' name='sportinput' />  
-            </p>
-
-            <p>
-                Win Percentage: <input type='text' name='wininput' />  
-            </p>
-
-            <p>
-                City: {{ ci }}<br />
-                Sport: {{ si }}<br />
-                Win Fraction: {{ wi }}<br />
-                Esimated Attendance: {{ attendancenumber }}%<br />
-
-            </p>
-
-            <p>
-                <input type="submit" name="clickbtn" value="Display Result">
-            </p>
-        </form>
-    </div>
-</div>    
-
 <!-- 7th Container -->    
-<div class="container-fluid bg-1 text-center">
+<div class="container-fluid bg-2 text-center">
   <h2 class="margin">About the Creator:</h2>
   <h3>	Timothy Ma received his Ph.D. in physics from UC Irvine in 2017 following receiving Bachelor Degrees in Astronomy and Physics from UC Berkeley. He was heavily involved in campus affairs between 2012-2017 including serving a term as President of the Associated Graduate Students to represent the 5,500 graduate and professional students.  His dissertation research focused on a quantum biology theory that models how certain animals may be able to detect Earth’s magnetic field and use it to navigate. This included developing an iPhone app titled MagneticVR where people can experience the sense of magnetic vision in a virtual reality world through the use of a Google Cardboard headset. He completed the Data Incubator Fellowship as part of the 2018 summer cohort.
 </h3>
@@ -227,9 +250,6 @@ My pipeline consists of a row iterator, a dictionary vectorizer, followed by a d
 
     
 <!-- Footer -->
-<footer class="container-fluid bg-4 text-center">
-  <p>Bootstrap Theme Made By <a href="https://www.w3schools.com">www.w3schools.com</a></p> 
-</footer>
     
 <script>
 includeHTML();
